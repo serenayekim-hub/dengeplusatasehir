@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i="sayfa_basligi">Denge Plus+ | Ataşehir Tuzlu Su Havuzu, Yüzme Kursu, Fitness, Sauna</title>
+<meta name="description" data-i-content="meta_aciklama" content="Küçükbakkalköy'de çok amaçlı spor kompleksi: cam tavanlı, tuzlu su sistemli kapalı havuz. Bebek, çocuk ve yetişkin yüzme dersleri, fitness, pilates, dövüş sporları ve sauna.">
+<meta name="color-scheme" content="light">
+<meta property="og:title" content="Denge Plus+ | Ataşehir'de tuzlu su havuzu">
+<meta property="og:description" content="Bebekten yetişkine yüzme dersleri, fitness, pilates, dövüş sporları ve sauna. Küçükbakkalköy, Ataşehir.">
+<meta property="og:image" content="/images/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,100..125,400..800;1,125,800&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel: reklam hesabı açılınca Pixel kodunu buraya yapıştırın -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Denge Plus+",
+  "image": "/images/hero.jpg",
+  "description": "Tuzlu su sistemli kapalı havuz, yüzme dersleri, fitness, pilates, dövüş sporları ve sauna.",
+  "telephone": "+905380136697",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Küçük Setli Sok. Denge Panorama Binası No:5-9",
+    "addressLocality": "Ataşehir",
+    "addressRegion": "İstanbul",
+    "postalCode": "34750",
+    "addressCountry": "TR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 40.98359, "longitude": 29.11067 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00", "closes": "21:00"
+  }],
+  "sameAs": ["https://www.instagram.com/dengeplus/"]
+}
+</script>
+
+<style>
+:root {
+  /* Logodan alınan renkler */
+  --logo-mavi-acik: #0A8ACF;
+  --logo-mavi: #0068BE;
+  --logo-mavi-koyu: #00409F;
+  --logo-turuncu-acik: #FE9009;
+  --logo-turuncu: #F35804;
+  --mavi-gecis: linear-gradient(180deg, #0A8ACF 0%, #0068BE 45%, #00409F 100%);
+  --turuncu-gecis: linear-gradient(180deg, #FE9009 0%, #F35804 100%);
+  --lacivert: #002A6B;
+  --mavi: #0068BE;
+  --turuncu: #F35804;
+  --su: #E8F4FB;
+  --metin: #0D2250;
+  --soluk: #4A5A80;
+  --cizgi: #D3DFEE;
+  --wa: #1FAF5A;
+  --wa-koyu: #178A47;
+  --yazi: "Saira", "Arial", system-ui, sans-serif;
+  --genislik: 1160px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; } }
+body { margin: 0; font-family: var(--yazi); font-stretch: 100%; font-size: 1.0625rem; line-height: 1.6; color: var(--metin); background: #fff; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--turuncu); outline-offset: 3px; }
+.kap { width: 100%; max-width: var(--genislik); margin: 0 auto; padding: 0 20px; }
+p { margin: 0; }
+
+/* Logodaki eğik, geniş yazıdan türeyen başlıklar */
+.baslik { margin: 0; font-stretch: 112%; font-style: normal; font-weight: 800; line-height: 1.05; letter-spacing: -0.01em; color: var(--logo-mavi-koyu); }
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .baslik { background: var(--mavi-gecis); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero .baslik, .tesis .baslik { background: none; -webkit-text-fill-color: currentColor; }
+}
+h2.baslik { font-size: clamp(2rem, 4.6vw, 3.4rem); }
+h3 { margin: 0; font-stretch: 112%; font-style: normal; font-weight: 700; font-size: 1.3rem; line-height: 1.15; }
+
+/* Eğik butonlar (logodaki açıyla) */
+.btn { display: inline-block; border-radius: 6px; padding: 14px 24px; font-weight: 600; text-decoration: none; border: 2px solid transparent; transition: background .15s, color .15s; }
+.btn > span { display: inline-flex; align-items: center; gap: 10px; }
+.btn svg { width: 20px; height: 20px; }
+.btn-wa { background: var(--turuncu-gecis); color: var(--lacivert); }
+.btn-wa:hover { background: linear-gradient(180deg, #FFA233 0%, #FE7012 100%); }
+.btn-cizgi { border-color: var(--logo-mavi); color: var(--logo-mavi); }
+.btn-cizgi:hover { background: var(--logo-mavi); color: #fff; }
+
+/* Üst menü */
+.ust { position: sticky; top: 0; z-index: 20; background: #fff; border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, #00409F 0%, #0A8ACF 70%, #FE9009 70%, #F35804 100%) 1; }
+.ust .kap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+.ust .logo img { height: 46px; width: auto; }
+.menu { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; }
+.menu a { text-decoration: none; font-weight: 500; color: var(--soluk); }
+.menu a:hover { color: var(--logo-turuncu); }
+.ust .btn { padding: 10px 18px; font-size: .95rem; white-space: nowrap; }
+@media (max-width: 1060px) { .menu { display: none; } }
+@media (max-width: 400px) { .ust .logo img { height: 38px; } .ust .btn { padding: 9px 14px; } }
+
+/* Açılış */
+.hero { position: relative; min-height: min(86svh, 760px); display: flex; align-items: flex-end; color: #fff; background: var(--lacivert) var(--bg, url("/images/hero.jpg")) center 40% / cover no-repeat; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,52,140,.85) 0%, rgba(0,64,159,.5) 55%, rgba(0,104,190,.1) 100%), linear-gradient(0deg, rgba(0,42,107,.7) 0%, rgba(0,42,107,0) 55%); }
+.hero .kap { position: relative; z-index: 1; padding-top: 64px; padding-bottom: 140px; }
+.hero h1 { color: #fff; font-size: clamp(2.5rem, 6.2vw, 4.7rem); font-style: italic; font-stretch: 125%; font-weight: 800; padding-right: .08em; }
+/* Logodaki eğimi takip eden basamaklı başlık */
+.baslik-merdiven span { display: block; }
+.baslik-merdiven span:nth-child(2) { margin-left: .45em; }
+.baslik-merdiven span:nth-child(3) { margin-left: .9em; }
+.hero-alt { margin-top: 20px; max-width: 42ch; font-size: 1.2rem; color: #E3ECFF; }
+.hero-eylem { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 32px; }
+.hero-eylem .tel { color: #fff; font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--turuncu); padding-bottom: 2px; }
+.hero-eylem .tel:hover { color: #FFC37A; }
+.hero-eylem .tel { border-bottom-color: var(--logo-turuncu-acik); }
+.hero-saat { margin-top: 18px; font-size: .98rem; color: #C9D7F5; }
+
+/* Açılıştaki hizmet şeridi: ilk ekranda tüm imkanlar */
+.hizmet-serit { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 26px 0 0; padding: 0; list-style: none; }
+.hizmet-serit a { display: inline-block; border-radius: 6px; padding: 8px 16px; border: 2px solid rgba(255,255,255,.75); color: #fff; text-decoration: none; font-weight: 600; background: rgba(0,42,107,.35); backdrop-filter: blur(2px); transition: background .15s, border-color .15s; }
+.hizmet-serit a > span { display: inline-block; }
+.hizmet-serit a:hover { background: rgba(255,255,255,.15); border-color: #fff; }
+.hizmet-serit li:first-child a { background: #fff; border-color: #fff; color: var(--logo-mavi-koyu); }
+
+/* İmkanlar bölümü */
+.imkanlar { background: var(--su); padding: 40px 0 88px; }
+.imkan-ust { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px 40px; }
+.imkan-ust p { color: var(--soluk); font-size: 1.1rem; max-width: 44ch; }
+.imkan-izgara { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 14px; margin-top: 36px; }
+.imkan { position: relative; padding: 24px 22px 26px; background: #fff; border-top: 4px solid var(--logo-mavi); display: flex; flex-direction: column; gap: 8px; }
+.imkan:nth-child(even) { border-top-color: var(--logo-turuncu); }
+.imkan.ana { background: var(--mavi-gecis); color: #fff; border-top-color: var(--logo-turuncu-acik); }
+.imkan h3 { font-size: 1.35rem; color: var(--logo-mavi-koyu); }
+.imkan.ana h3 { color: #fff; font-size: 1.6rem; }
+.imkan p { color: var(--soluk); font-size: .98rem; }
+.imkan.ana p { color: #DDEBFA; }
+@media (max-width: 520px) { .hizmet-serit a { padding: 7px 14px; font-size: .95rem; } }
+@media (max-width: 1000px) { .imkan-izgara { grid-template-columns: repeat(2, 1fr); } .imkan.ana { grid-column: span 2; } .imkan { min-height: 0; } }
+@media (max-width: 480px) { .imkan-izgara { gap: 10px; } .imkan { padding: 18px 16px 20px; } .imkan h3 { font-size: 1.12rem; } .imkan.ana h3 { font-size: 1.35rem; } .imkan p { font-size: .92rem; line-height: 1.45; } }
+
+/* Dalgalar + gerçek kulvar halatı (kırmızı, beyaz, mavi) */
+.dalgalar { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; pointer-events: none; z-index: 1; }
+.dalga { position: absolute; left: 0; right: 0; bottom: 0; background-repeat: repeat-x; }
+.dalga-1 { height: 120px; bottom: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='120' viewBox='0 0 1200 120'%3E%3Cpath d='M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 V120 H0Z' fill='rgba(255,255,255,0.14)'/%3E%3C/svg%3E");
+  background-size: 1200px 120px; animation: akis-1 22s linear infinite; }
+.dalga-2 { height: 100px; bottom: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='100' viewBox='0 0 900 100'%3E%3Cpath d='M0 50 Q112.5 15 225 50 T450 50 T675 50 T900 50 V100 H0Z' fill='rgba(10,138,207,0.38)'/%3E%3C/svg%3E");
+  background-size: 900px 100px; animation: akis-2 15s linear infinite; }
+.dalga-3 { height: 70px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='70' viewBox='0 0 1400 70'%3E%3Cpath d='M0 35 Q175 5 350 35 T700 35 T1050 35 T1400 35 V70 H0Z' fill='%23E8F4FB'/%3E%3C/svg%3E");
+  background-size: 1400px 70px; animation: akis-3 11s linear infinite; }
+@keyframes akis-1 { to { background-position-x: -1200px; } }
+@keyframes akis-2 { to { background-position-x: 900px; } }
+@keyframes akis-3 { to { background-position-x: -1400px; } }
+.halat { position: absolute; left: 0; bottom: 62px; z-index: 2; display: block; width: 100%; height: 14px; animation: salin 4.5s ease-in-out infinite; }
+@keyframes salin { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(5px) rotate(.25deg); } }
+.halat-cizgi { display: block; width: 100%; height: 10px; }
+
+/* Havuz */
+.havuz { background: #fff; padding: 96px 0; }
+.havuz .kap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+.havuz-yazi > p { margin-top: 20px; color: var(--soluk); font-size: 1.12rem; max-width: 50ch; }
+.karsi { width: 100%; margin-top: 32px; border-collapse: collapse; font-size: 1rem; }
+.karsi th, .karsi td { text-align: left; padding: 12px 12px 12px 0; border-bottom: 1px solid #C3DBEF; vertical-align: top; }
+.karsi thead th { font-weight: 600; color: var(--soluk); font-size: .92rem; border-bottom: 2px solid var(--logo-mavi-koyu); }
+.karsi thead th:last-child { color: var(--logo-turuncu); font-weight: 700; }
+.karsi tbody th { font-weight: 600; color: var(--lacivert); width: 26%; }
+.karsi td:last-child { color: var(--lacivert); font-weight: 500; }
+.egik-foto { margin: 0; border-radius: 6px; overflow: hidden; }
+.egik-foto img { width: 100%; height: 100%; object-fit: cover; }
+.havuz .egik-foto { aspect-ratio: 4 / 5; }
+.foto-not { margin-top: 10px; font-size: .9rem; color: var(--soluk); padding-left: 9%; }
+@media (max-width: 880px) { .havuz .kap { grid-template-columns: 1fr; } .havuz .egik-foto { aspect-ratio: 16 / 10; } }
+
+/* Dersler */
+.dersler { padding: 96px 0; }
+.dersler .kap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
+.dersler-sol { position: sticky; top: 100px; }
+.dersler-sol .egik-foto { aspect-ratio: 3 / 4; margin-top: 28px; }
+.dersler-sol > p { margin-top: 16px; color: var(--soluk); font-size: 1.1rem; }
+.ders { padding: 26px 0 28px; }
+.ders + .halat-cizgi { opacity: .9; }
+.ders h3 { color: var(--logo-turuncu); font-size: 1.7rem; padding-right: .08em; }
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .ders h3 { background: var(--turuncu-gecis); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+}
+.ders p { margin-top: 10px; color: var(--soluk); max-width: 52ch; }
+.ders .bilgi { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-weight: 600; color: var(--logo-mavi); text-decoration: none; }
+.ders .bilgi svg { width: 18px; height: 18px; }
+.ders .bilgi:hover { text-decoration: underline; }
+@media (max-width: 880px) { .dersler .kap { grid-template-columns: 1fr; } .dersler-sol { position: static; } .dersler-sol .egik-foto { aspect-ratio: 4 / 3; } }
+
+
+/* Okul ve kulüplere kiralama */
+.kiralama { background: #FFF4EA; border-top: 4px solid var(--logo-turuncu); padding: 88px 0; }
+.kiralama .kap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.kiralama .baslik { background: none; -webkit-text-fill-color: currentColor; color: var(--logo-mavi-koyu); }
+.kiralama-yazi > p { margin-top: 18px; color: var(--soluk); font-size: 1.12rem; max-width: 48ch; }
+.kiralama-yazi .eylem { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 30px; }
+.kiralama-yazi .tel { color: var(--logo-mavi-koyu); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--logo-turuncu); padding-bottom: 2px; }
+.kimler { list-style: none; margin: 0; padding: 0; }
+.kimler li { padding: 22px 0; border-bottom: 1px solid #F3D7BF; }
+.kimler li:first-child { border-top: 2px solid var(--logo-mavi-koyu); }
+.kimler h3 { color: var(--logo-turuncu); font-size: 1.3rem; }
+.kimler p { margin-top: 6px; color: var(--soluk); }
+@media (max-width: 880px) { .kiralama .kap { grid-template-columns: 1fr; gap: 32px; } }
+
+/* Tesis */
+.tesis { background: radial-gradient(90% 70% at 85% 0%, rgba(10,138,207,.55) 0%, rgba(10,138,207,0) 60%), linear-gradient(180deg, #00409F 0%, #002A6B 100%); color: #fff; padding: 96px 0; }
+.tesis .baslik { color: #fff; }
+.tesis-ust { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; }
+.tesis-ust p { color: #CFE0F7; font-size: 1.12rem; max-width: 46ch; }
+.tesis-ust strong { color: #fff; font-weight: 600; }
+.tesis-foto { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 16px; margin-top: 48px; }
+.tesis-foto figure { margin: 0; }
+.tesis-foto .cerceve { overflow: hidden; height: 420px; border-radius: 6px; }
+.tesis-foto img { width: 100%; height: 100%; object-fit: cover; }
+.tesis-foto figcaption { margin-top: 12px; color: #CFE0F7; font-size: .98rem; }
+.tesis-foto figcaption b { display: block; color: var(--logo-turuncu-acik); font-stretch: 112%; font-weight: 700; font-size: 1.1rem; }
+@media (max-width: 880px) {
+  .tesis-ust { grid-template-columns: 1fr; gap: 16px; }
+  .tesis-foto { grid-template-columns: 1fr 1fr; }
+  .tesis-foto figure:first-child { grid-column: span 2; }
+  .tesis-foto .cerceve { height: 260px; }
+}
+
+/* Sorular: açık liste */
+.sorular { background: var(--su); padding: 88px 0; }
+.soru-izgara { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; margin-top: 40px; }
+.soru-izgara h3 { color: var(--logo-mavi-koyu); font-size: 1.2rem; }
+.soru-izgara p { margin-top: 10px; color: var(--soluk); }
+@media (max-width: 760px) { .soru-izgara { grid-template-columns: 1fr; } }
+
+/* Konum */
+.konum { padding: 96px 0; }
+.konum .kap { display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px; align-items: start; }
+.adres { margin-top: 28px; font-size: 1.15rem; color: var(--lacivert); font-style: normal; }
+.konum dl { margin: 24px 0 0; display: grid; gap: 18px; }
+.konum dt { font-weight: 600; color: var(--soluk); font-size: .95rem; }
+.konum dd { margin: 2px 0 0; font-size: 1.15rem; color: var(--lacivert); }
+.konum dd a { font-weight: 600; text-decoration: none; }
+.konum .eylem { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.konum .kucuk { margin-top: 24px; color: var(--soluk); font-size: .98rem; }
+.konum .kucuk a { color: var(--logo-turuncu); font-weight: 600; }
+.harita { aspect-ratio: 4 / 3; background: var(--su); border: 1px solid var(--cizgi); }
+.harita iframe { width: 100%; height: 100%; border: 0; display: block; }
+.harita-ac { display: inline-block; margin-top: 12px; font-weight: 600; color: var(--logo-mavi); text-decoration: none; }
+.harita-ac:hover { text-decoration: underline; }
+@media (max-width: 880px) { .konum .kap { grid-template-columns: 1fr; } }
+
+/* Alt bilgi */
+.alt { border-top: 1px solid var(--cizgi); padding: 40px 0 110px; color: var(--soluk); font-size: .95rem; }
+.alt .kap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+.alt img { height: 70px; width: auto; }
+.alt a { color: var(--lacivert); font-weight: 600; text-decoration: none; }
+
+/* Sabit WhatsApp */
+.wa-sabit { position: fixed; right: 18px; bottom: 18px; z-index: 30; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; background: var(--wa); color: #fff; box-shadow: 0 6px 18px rgba(10,42,94,.35); }
+.wa-sabit:hover { background: var(--wa-koyu); }
+.wa-sabit svg { width: 32px; height: 32px; }
+</style>
+</head>
+<body data-i-wa="whatsapp" data-wa="905380136697">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.41.29.14.46.12.63-.07.17-.19.72-.84.92-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38Z"/></symbol>
+    <pattern id="halat-desen" width="42" height="14" patternUnits="userSpaceOnUse">
+      <ellipse cx="7" cy="7" rx="7" ry="6" fill="#0068BE"/>
+      <ellipse cx="21" cy="7" rx="7" ry="6" fill="#FFFFFF"/>
+      <ellipse cx="35" cy="7" rx="7" ry="6" fill="#F47510"/>
+    </pattern>
+    <pattern id="ince-halat" width="30" height="10" patternUnits="userSpaceOnUse">
+      <ellipse cx="5" cy="5" rx="5" ry="4" fill="#0068BE"/>
+      <ellipse cx="15" cy="5" rx="5" ry="4" fill="#D3DFEE"/>
+      <ellipse cx="25" cy="5" rx="5" ry="4" fill="#F47510"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="ust">
+  <div class="kap">
+    <a class="logo" href="/"><img data-i-src="logo" src="/images/logo.png" alt="Denge Plus+" width="149" height="46"></a>
+    <nav aria-label="Ana menü">
+      <ul class="menu">
+        <li><a href="#imkanlar">Spor ve imkanlar</a></li>
+        <li><a href="#havuz">Havuz</a></li>
+        <li><a href="#dersler">Yüzme dersleri</a></li>
+        <li><a href="#kiralama">Okul ve kulüpler</a></li>
+        <li><a href="#tesis">Tesis</a></li>
+        <li><a href="#konum">Konum</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-wa wa-link" href="#" data-i-mesaj="ust_buton_mesaj" data-mesaj="Merhaba, Denge Plus+ hakkında bilgi almak istiyorum."><span><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i="ust_buton">Bize yazın</span></span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" data-i-bg="hero_gorsel">
+    <div class="kap">
+      <h1 class="baslik baslik-merdiven"><span data-i="hero_satir1">Havuz.</span> <span data-i="hero_satir2">Fitness.</span> <span data-i="hero_satir3">Sauna.</span></h1>
+      <p class="hero-alt" data-i="hero_alt">Ataşehir Küçükbakkalköy'de cam tavanlı tuzlu su havuzu ve çok amaçlı spor kompleksi.</p>
+      <ul class="hizmet-serit" aria-label="İmkanlar">
+        <li><a href="#havuz"><span data-i="serit1">Kapalı havuz</span></a></li>
+        <li><a href="#imkan-fitness"><span data-i="serit2">Fitness</span></a></li>
+        <li><a href="#imkan-pilates"><span data-i="serit3">Pilates</span></a></li>
+        <li><a href="#imkan-dovus"><span data-i="serit4">Dövüş sporları</span></a></li>
+        <li><a href="#imkan-sauna"><span data-i="serit5">Sauna</span></a></li>
+      </ul>
+      <div class="hero-eylem">
+        <a class="btn btn-wa wa-link" href="#" data-i-mesaj="hero_buton_mesaj" data-mesaj="Merhaba, yüzme dersleri hakkında bilgi almak istiyorum."><span><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i="hero_buton">WhatsApp'tan yazın</span></span></a>
+        <a class="tel" data-i-tel href="tel:+905380136697"><span data-i="hero_tel_onek">ya da arayın:</span> <span data-i="telefon">0538 013 66 97</span></a>
+      </div>
+      <p class="hero-saat" data-i="hero_saat">Her gün 08:00–21:00 açığız.</p>
+    </div>
+    <div class="dalgalar" aria-hidden="true">
+      <div class="dalga dalga-1"></div>
+      <div class="dalga dalga-2"></div>
+      <div class="dalga dalga-3"></div>
+    </div>
+    <svg class="halat" aria-hidden="true"><rect width="100%" height="14" fill="url(#halat-desen)"/></svg>
+  </section>
+
+  <section class="imkanlar" id="imkanlar">
+    <div class="kap">
+      <div class="imkan-ust">
+        <h2 class="baslik" data-i="imkanlar_baslik">Havuzun ötesinde, çok amaçlı bir spor kompleksi</h2>
+        <p data-i="imkanlar_metin">İster düzenli antrenman yapan bir sporcu olun, ister yeni başlayın: havuzda kulaç atın, fitness ya da dövüş sporlarıyla güçlenin, saunada toparlanın. Hepsi tek binada.</p>
+      </div>
+      <div class="imkan-izgara">
+        <article class="imkan ana">
+          <h3 data-i="imkan1_baslik">Kapalı havuz</h3>
+          <p data-i="imkan1_metin">Cam tavanlı, tuzlu su sistemli havuz. Bebek, çocuk ve yetişkin yüzme dersleri.</p>
+        </article>
+        <article class="imkan" id="imkan-fitness">
+          <h3 data-i="imkan2_baslik">Fitness</h3>
+          <p data-i="imkan2_metin">Kardiyo ve ağırlık antrenmanı için salon.</p>
+        </article>
+        <article class="imkan" id="imkan-pilates">
+          <h3 data-i="imkan3_baslik">Pilates</h3>
+          <p data-i="imkan3_metin">Duruşu ve karın kaslarını güçlendiren pilates dersleri.</p>
+        </article>
+        <article class="imkan" id="imkan-dovus">
+          <h3 data-i="imkan4_baslik">Dövüş sporları</h3>
+          <p data-i="imkan4_metin">Çocuklar ve yetişkinler için disiplin ve kondisyon kazandıran dersler.</p>
+        </article>
+        <article class="imkan" id="imkan-sauna">
+          <h3 data-i="imkan5_baslik">Sauna</h3>
+          <p data-i="imkan5_metin">Yüzme ya da antrenman sonrası kasları gevşetmek için.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="havuz" id="havuz">
+    <div class="kap">
+      <div class="havuz-yazi">
+        <h2 class="baslik" data-i="havuz_baslik">Gözü yakmayan, cildi kurutmayan su</h2>
+        <p data-i="havuz_metin">Havuzumuz tuzlu su sistemiyle çalışıyor. Suyu temizleyen dezenfektan, sudaki tuzdan cihazla ve kontrollü olarak üretiliyor. Fark ilk girişte anlaşılıyor: keskin koku yok, çıkınca gözler kızarmıyor.</p>
+        <table class="karsi">
+          <thead><tr><th scope="col"></th><th scope="col" data-i="tablo_sutun1">Klasik havuz</th><th scope="col" data-i="tablo_sutun2">Denge Plus+</th></tr></thead>
+          <tbody>
+            <tr><th scope="row" data-i="tablo1_ad">Dezenfeksiyon</th><td data-i="tablo1_klasik">Suya dışarıdan kimyasal eklenir</td><td data-i="tablo1_denge">Tuzdan cihazla üretilir</td></tr>
+            <tr><th scope="row" data-i="tablo2_ad">Koku</th><td data-i="tablo2_klasik">Belirgin klor kokusu</td><td data-i="tablo2_denge">Çok hafif</td></tr>
+            <tr><th scope="row" data-i="tablo3_ad">Göz ve cilt</th><td data-i="tablo3_klasik">Yanma ve kuruluk sık görülür</td><td data-i="tablo3_denge">Çok daha nazik</td></tr>
+            <tr><th scope="row" data-i="tablo4_ad">Işık</th><td data-i="tablo4_klasik">Çoğunlukla yapay ışık</td><td data-i="tablo4_denge">Cam tavandan gün ışığı</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <figure class="egik-foto"><img data-i-src="havuz_gorsel" src="/images/havuz-merdiven.jpg" alt="Denge Plus+ havuzu" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="dersler" id="dersler">
+    <div class="kap">
+      <div class="dersler-sol">
+        <h2 class="baslik" data-i="dersler_baslik">Suyla tanışma yaşı yok</h2>
+        <p data-i="dersler_metin">Hangi gruba uygun olduğunuzu bilmiyorsanız sorun değil. Yaşı ve yüzme seviyesini yazın, size uygun grubu ve saatleri biz önerelim.</p>
+        <figure class="egik-foto"><img data-i-src="dersler_gorsel" src="/images/bebek-yuzmesi.jpg" alt="Yüzme dersi" loading="lazy"></figure>
+      </div>
+      <div class="ders-liste">
+        <svg class="halat-cizgi" aria-hidden="true"><rect width="100%" height="10" fill="url(#ince-halat)"/></svg>
+        <div class="ders">
+          <h3 data-i="ders1_baslik">Bebek yüzmesi</h3>
+          <p data-i="ders1_metin">Anne ya da baba suda bebeğiyle birlikte. Oyuncaklar, şarkılar ve hocanın rehberliğiyle suya alışma.</p>
+          <a class="bilgi wa-link" href="#" data-i-mesaj="ders1_mesaj" data-mesaj="Merhaba, bebek yüzmesi hakkında bilgi almak istiyorum. Bebeğimin yaşı:"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i="ders1_link">Bebek yüzmesini sorun</span></a>
+        </div>
+        <svg class="halat-cizgi" aria-hidden="true"><rect width="100%" height="10" fill="url(#ince-halat)"/></svg>
+        <div class="ders">
+          <h3 data-i="ders2_baslik">Çocuk yüzme</h3>
+          <p data-i="ders2_metin">5–7 kişilik gruplar, haftada 2 gün. Su korkusu olan çocuktan yarışmaya hazırlanana kadar, herkes kendi seviyesindeki grupta.</p>
+          <a class="bilgi wa-link" href="#" data-i-mesaj="ders2_mesaj" data-mesaj="Merhaba, çocuk yüzme dersleri hakkında bilgi almak istiyorum. Çocuğumun yaşı:"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i="ders2_link">Çocuk gruplarını sorun</span></a>
+        </div>
+        <svg class="halat-cizgi" aria-hidden="true"><rect width="100%" height="10" fill="url(#ince-halat)"/></svg>
+        <div class="ders">
+          <h3 data-i="ders3_baslik">Yetişkin yüzme</h3>
+          <p data-i="ders3_metin">Hiç yüzme bilmeyenler de, tekniğini düzeltmek isteyenler de. Utanacak bir şey yok, gruplarımızda her seviyeden yetişkin var.</p>
+          <a class="bilgi wa-link" href="#" data-i-mesaj="ders3_mesaj" data-mesaj="Merhaba, yetişkin yüzme dersleri hakkında bilgi almak istiyorum."><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i="ders3_link">Yetişkin gruplarını sorun</span></a>
+        </div>
+        <svg class="halat-cizgi" aria-hidden="true"><rect width="100%" height="10" fill="url(#ince-halat)"/></svg>
+        <div class="ders">
+          <h3 data-i="ders4_baslik">Birebir ders</h3>
+          <p data-i="ders4_metin">Hocanızla baş başa, size uyan saatte. Hızlı ilerlemek isteyenler ve grup saatleri tutmayanlar için.</p>
+          <a class="bilgi wa-link" href="#" data-i-mesaj="ders4_mesaj" data-mesaj="Merhaba, birebir yüzme dersi hakkında bilgi almak istiyorum."><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i="ders4_link">Birebir dersi sorun</span></a>
+        </div>
+        <svg class="halat-cizgi" aria-hidden="true"><rect width="100%" height="10" fill="url(#ince-halat)"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="kiralama" id="kiralama">
+    <div class="kap">
+      <div class="kiralama-yazi">
+        <h2 class="baslik" data-i="kiralama_baslik">Okul ve kulüplere havuz kiralıyoruz</h2>
+        <p data-i="kiralama_metin">Okulunuzun yüzme dersleri ya da kulübünüzün antrenmanları için havuzumuzu kiralayabilirsiniz. Gün, saat ve süreyi ihtiyacınıza göre birlikte planlayalım.</p>
+        <div class="eylem">
+          <a class="btn btn-wa wa-link" href="#" data-i-mesaj="kiralama_mesaj" data-mesaj="Merhaba, okulumuz/kulübümüz için havuz kiralama hakkında bilgi almak istiyorum."><span><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i="kiralama_buton">Kiralama için yazın</span></span></a>
+          <a class="tel" data-i-tel href="tel:+905380136697" data-i="telefon">0538 013 66 97</a>
+        </div>
+      </div>
+      <ul class="kimler">
+        <li>
+          <h3 data-i="kimler1_baslik">Okullar</h3>
+          <p data-i="kimler1_metin">Anaokulu, ilkokul ve ortaokullar için ders saatlerine uygun yüzme programları.</p>
+        </li>
+        <li>
+          <h3 data-i="kimler2_baslik">Spor kulüpleri</h3>
+          <p data-i="kimler2_metin">Yüzme takımları ve kulüpler için düzenli antrenman saatleri.</p>
+        </li>
+        <li>
+          <h3 data-i="kimler3_baslik">Tek seferlik etkinlikler</h3>
+          <p data-i="kimler3_metin">Okul ve kulüplerin özel gün, seçme ya da gösteri etkinlikleri.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tesis" id="tesis">
+    <div class="kap">
+      <div class="tesis-ust">
+        <h2 class="baslik" data-i="tesis_baslik">Tesisten kareler</h2>
+        <p data-i="tesis_metin">Yeni yapılan tesiste velilerin beklemesi için havuz kenarında sandalyeler, kabinli duşlar ve ders sonrası soluklanacak bir bahçe var.</p>
+      </div>
+      <div class="tesis-foto">
+        <figure>
+          <div class="cerceve"><img data-i-src="tesis1_gorsel" src="/images/hero.jpg" alt="Tesis" loading="lazy"></div>
+          <figcaption><b data-i="tesis1_baslik">Havuz salonu</b><span data-i="tesis1_metin">Cam tavan, şezlonglar ve veliler için bekleme sandalyeleri.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="cerceve"><img data-i-src="tesis2_gorsel" src="/images/dus.jpg" alt="Tesis" loading="lazy"></div>
+          <figcaption><b data-i="tesis2_baslik">Duş ve soyunma</b><span data-i="tesis2_metin">Kabinli duşlar, saç kurutma makinesi.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="cerceve"><img data-i-src="tesis3_gorsel" src="/images/bahce.jpg" alt="Tesis" loading="lazy"></div>
+          <figcaption><b data-i="tesis3_baslik">Bahçe</b><span data-i="tesis3_metin">Ders öncesi ve sonrası soluklanmak için.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sorular" id="sorular">
+    <div class="kap">
+      <h2 class="baslik" data-i="sorular_baslik">En çok sorulanlar</h2>
+      <div class="soru-izgara">
+        <div>
+          <h3 data-i="soru1_baslik">Tuzlu su havuzu klorsuz mu?</h3>
+          <p data-i="soru1_cevap">Tamamen klorsuz değil. Dezenfektan sudaki tuzdan cihazla, kontrollü miktarda üretiliyor. Bu yüzden suya dışarıdan kimyasal eklenen havuzlara göre koku ve göz yanması çok daha az.</p>
+        </div>
+        <div>
+          <h3 data-i="soru2_baslik">Kaç yaşından itibaren ders var?</h3>
+          <p data-i="soru2_cevap">Bebek yüzmesinden yetişkin gruplarına kadar her yaşa uygun ders var. Yaşı WhatsApp'tan yazın, uygun grubu söyleyelim.</p>
+        </div>
+        <div>
+          <h3 data-i="soru3_baslik">Ücretler ne kadar?</h3>
+          <p data-i="soru3_cevap">Programa ve haftalık ders sayısına göre değişiyor. Güncel fiyatları WhatsApp'tan ya da telefonla öğrenebilirsiniz.</p>
+        </div>
+        <div>
+          <h3 data-i="soru4_baslik">Yanımda ne getireyim?</h3>
+          <p data-i="soru4_cevap">Mayo, bone, havlu ve terlik yeterli. Gözlük kullanacaksanız kendi gözlüğünüzü getirin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="konum" id="konum">
+    <div class="kap">
+      <div>
+        <h2 class="baslik" data-i="konum_baslik">Küçük Setli Sokak, No 5-9</h2>
+        <address class="adres" data-i="adres">Denge Panorama Binası<br>Küçükbakkalköy Mah., 34750 Ataşehir / İstanbul</address>
+        <dl>
+          <div><dt>Açık olduğumuz saatler</dt><dd data-i="konum_saat">Her gün 08:00–21:00</dd></div>
+          <div><dt>Telefon ve WhatsApp</dt><dd><a data-i-tel href="tel:+905380136697" data-i="telefon">0538 013 66 97</a></dd></div>
+        </dl>
+        <div class="eylem">
+          <a class="btn btn-wa wa-link" href="#" data-i-mesaj="konum_buton_mesaj" data-mesaj="Merhaba, Denge Plus+ hakkında bilgi almak istiyorum."><span><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i="konum_buton">WhatsApp'tan yazın</span></span></a>
+          <a class="btn btn-cizgi" data-i-href="yol_tarifi_link" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.98359,29.11067&amp;destination_place_id=ChIJcwgjWZ_HyhQRpwcoIGjYsgQ" target="_blank" rel="noopener"><span>Yol tarifi alın</span></a>
+        </div>
+        <p class="kucuk">Velilerimizin yorumlarını <a data-i-href="google_yorum_link" href="https://www.google.com/maps/place/?q=place_id:ChIJcwgjWZ_HyhQRpwcoIGjYsgQ" target="_blank" rel="noopener">Google'da</a> okuyabilir, bizi <a data-i-href="instagram_link" href="https://www.instagram.com/dengeplus/" target="_blank" rel="noopener">Instagram'da</a> takip edebilirsiniz.</p>
+      </div>
+      <div>
+        <div class="harita">
+          <iframe title="Denge Plus+ konumu, Google Haritalar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+            src="https://maps.google.com/maps?q=40.98359,29.11067(Denge%20Plus%2B)&amp;z=17&amp;hl=tr&amp;output=embed"></iframe>
+        </div>
+        <a class="harita-ac" data-i-href="harita_link" href="https://share.google/ttGgFuQdwylC1JZdX" target="_blank" rel="noopener">Konumu Google Haritalar'da açın</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="alt">
+  <div class="kap">
+    <img data-i-src="logo_tam" src="/images/logo-tam.png" alt="Denge Plus+ Havuz, Fitness, Sauna" width="161" height="70">
+    <p><a data-i-tel href="tel:+905380136697" data-i="telefon">0538 013 66 97</a><br><a data-i-href="instagram_link" href="https://www.instagram.com/dengeplus/" target="_blank" rel="noopener" data-i="instagram_ad">@dengeplus</a></p>
+    <p>© <span id="yil">2026</span> Denge Plus+</p>
+  </div>
+</footer>
+
+<a class="wa-sabit wa-link" href="#" data-i-mesaj="ust_buton_mesaj" data-mesaj="Merhaba, Denge Plus+ hakkında bilgi almak istiyorum." aria-label="WhatsApp'tan yazın"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<script>
+  var WA_NUMARA = (document.body.getAttribute("data-wa") || "").replace(/\D/g, "");
+  document.querySelectorAll(".wa-link").forEach(function (a) {
+    a.href = "https://wa.me/" + WA_NUMARA + "?text=" + encodeURIComponent(a.getAttribute("data-mesaj") || "Merhaba");
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+  document.getElementById("yil").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

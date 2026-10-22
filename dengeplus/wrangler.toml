@@ -1,0 +1,10 @@
+# Cloudflare Pages ayarları
+name = "dengeplus"
+pages_build_output_dir = "public"
+compatibility_date = "2025-09-01"
+
+# İçerik ve fotoğrafların saklandığı veri deposu.
+# Kurulumdaki 3. adımda alacağınız kimliği (id) aşağıya yapıştırın.
+[[kv_namespaces]]
+binding = "ICERIK"
+id = "BURAYA_KV_KIMLIGINI_YAPISTIRIN"

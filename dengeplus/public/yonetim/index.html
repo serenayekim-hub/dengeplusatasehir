@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Denge Plus+ Yönetim Paneli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wdth,wght@100..125,400..700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --mavi: #0068BE; --mavi-koyu: #00409F; --lacivert: #002A6B; --turuncu: #F35804; --turuncu-acik: #FE9009;
+  --zemin: #F3F7FC; --cizgi: #D3DFEE; --metin: #0D2250; --soluk: #4A5A80; --kirmizi: #C62828; --yesil: #1E7B45;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Saira", Arial, system-ui, sans-serif; color: var(--metin); background: var(--zemin); font-size: 16px; line-height: 1.5; }
+button, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--turuncu-acik); outline-offset: 2px; }
+.gizli { display: none !important; }
+h1, h2 { font-stretch: 112%; font-weight: 700; margin: 0; color: var(--mavi-koyu); }
+
+/* Giriş */
+.giris { min-height: 100svh; display: grid; place-items: center; padding: 24px; }
+.giris form { width: 100%; max-width: 380px; background: #fff; padding: 36px 32px; border-top: 4px solid var(--turuncu); box-shadow: 0 10px 30px rgba(0,42,107,.08); }
+.giris h1 { font-size: 1.5rem; margin: 8px 0 24px; }
+.giris .logo { font-stretch: 112%; font-weight: 700; font-size: 1.6rem; color: var(--mavi); }
+.giris .logo span { color: var(--turuncu); }
+label { display: block; font-weight: 600; margin-bottom: 6px; font-size: .95rem; }
+input[type=text], input[type=password], textarea { width: 100%; padding: 11px 12px; border: 1.5px solid var(--cizgi); background: #fff; border-radius: 4px; }
+input:focus, textarea:focus { border-color: var(--mavi); outline: none; }
+textarea { min-height: 96px; resize: vertical; }
+.alan { margin-bottom: 18px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 20px; border: 2px solid transparent; border-radius: 4px; font-weight: 600; cursor: pointer; text-decoration: none; }
+.btn-ana { background: linear-gradient(180deg, var(--turuncu-acik), var(--turuncu)); color: var(--lacivert); }
+.btn-ana:disabled { opacity: .5; cursor: not-allowed; }
+.btn-ikincil { background: #fff; border-color: var(--cizgi); color: var(--metin); }
+.btn-ikincil:hover { border-color: var(--mavi); }
+.btn-metin { background: none; border: 0; padding: 4px 0; color: var(--mavi); font-weight: 600; cursor: pointer; font-size: .9rem; }
+.hata { color: var(--kirmizi); font-weight: 600; margin: 0 0 16px; }
+.giris .btn-ana { width: 100%; margin-top: 4px; }
+
+/* Panel */
+.ust { position: sticky; top: 0; z-index: 10; background: #fff; border-bottom: 1px solid var(--cizgi); }
+.ust .ic { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.ust h1 { font-size: 1.2rem; margin-right: auto; }
+.durum { font-size: .92rem; color: var(--soluk); }
+.durum.degisti { color: var(--turuncu); font-weight: 600; }
+.durum.kaydedildi { color: var(--yesil); font-weight: 600; }
+.duzen { max-width: 1200px; margin: 0 auto; padding: 24px 20px 80px; display: grid; grid-template-columns: 240px 1fr; gap: 28px; align-items: start; }
+.gruplar { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 2px; }
+.gruplar button { text-align: left; padding: 10px 14px; border: 0; background: none; border-left: 3px solid transparent; cursor: pointer; font-weight: 600; color: var(--soluk); }
+.gruplar button:hover { color: var(--mavi); }
+.gruplar button[aria-current="true"] { color: var(--mavi-koyu); border-left-color: var(--turuncu); background: #fff; }
+.gruplar button .rozet { display: inline-block; margin-left: 6px; min-width: 20px; padding: 0 6px; border-radius: 10px; background: var(--turuncu); color: #fff; font-size: .75rem; text-align: center; }
+.kart { background: #fff; padding: 28px; border-top: 4px solid var(--mavi); }
+.kart h2 { font-size: 1.5rem; margin-bottom: 6px; }
+.kart > p { color: var(--soluk); margin: 0 0 24px; }
+.alan.duzenlendi label::after { content: " • değişti"; color: var(--turuncu); font-weight: 600; }
+.alan.hatali input, .alan.hatali textarea { border-color: var(--kirmizi); }
+.alan-alt { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 4px; min-height: 26px; }
+.ipucu { font-size: .85rem; color: var(--soluk); }
+.gorsel-alan { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.gorsel-alan img { width: 220px; max-width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--zemin); border: 1px solid var(--cizgi); }
+.gorsel-alan img.logo-onizleme { object-fit: contain; background: #fff; }
+.gorsel-dugmeler { display: flex; flex-direction: column; gap: 8px; }
+.yukleniyor { font-size: .9rem; color: var(--soluk); }
+@media (max-width: 760px) {
+  .duzen { grid-template-columns: 1fr; }
+  .gruplar { position: static; flex-direction: row; overflow-x: auto; gap: 4px; }
+  .gruplar button { white-space: nowrap; border-left: 0; border-bottom: 3px solid transparent; }
+  .gruplar button[aria-current="true"] { border-bottom-color: var(--turuncu); }
+  .kart { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<section class="giris gizli" id="giris">
+  <form id="giris-form" autocomplete="on">
+    <div class="logo">DENGE <span>Plus+</span></div>
+    <h1>Yönetim paneli</h1>
+    <p class="hata gizli" id="giris-hata" role="alert"></p>
+    <div class="alan">
+      <label for="kullanici">Kullanıcı adı</label>
+      <input type="text" id="kullanici" name="username" autocomplete="username" required>
+    </div>
+    <div class="alan">
+      <label for="sifre">Şifre</label>
+      <input type="password" id="sifre" name="password" autocomplete="current-password" required>
+    </div>
+    <button class="btn btn-ana" type="submit" id="giris-btn">Giriş yap</button>
+  </form>
+</section>
+
+<section class="gizli" id="panel">
+  <header class="ust">
+    <div class="ic">
+      <h1>Denge Plus+ yönetim</h1>
+      <span class="durum" id="durum" aria-live="polite">Tüm değişiklikler kayıtlı</span>
+      <a class="btn btn-ikincil" href="/" target="_blank" rel="noopener">Siteyi aç</a>
+      <button class="btn btn-ana" id="kaydet" disabled>Değişiklikleri kaydet</button>
+      <button class="btn btn-ikincil" id="cikis">Çıkış</button>
+    </div>
+  </header>
+  <div class="duzen">
+    <nav class="gruplar" id="gruplar" aria-label="Bölümler"></nav>
+    <main class="kart" id="kart"></main>
+  </div>
+</section>
+
+<script>
+(function () {
+  var sema = [], degerler = {}, kayitli = {}, varsayilan = {}, aktif = 0, hataliAlanlar = {};
+  var $ = function (id) { return document.getElementById(id); };
+
+  function api(yol, secenek) {
+    secenek = secenek || {};
+    secenek.credentials = "same-origin";
+    return fetch(yol, secenek).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (veri) { return { durum: r.status, veri: veri }; });
+    });
+  }
+
+  function girisGoster(mesaj) {
+    $("panel").classList.add("gizli");
+    $("giris").classList.remove("gizli");
+    if (mesaj) { $("giris-hata").textContent = mesaj; $("giris-hata").classList.remove("gizli"); }
+    $("kullanici").focus();
+  }
+
+  function yukle() {
+    api("/api/icerik").then(function (s) {
+      if (s.durum === 401) return girisGoster();
+      if (s.durum !== 200) return girisGoster(s.veri.hata || "Panel yüklenemedi.");
+      sema = s.veri.sema;
+      degerler = Object.assign({}, s.veri.degerler);
+      kayitli = Object.assign({}, s.veri.degerler);
+      sema.forEach(function (g) { g.alanlar.forEach(function (a) { varsayilan[a.k] = a.v; }); });
+      $("giris").classList.add("gizli");
+      $("panel").classList.remove("gizli");
+      gruplariCiz();
+      grubuCiz();
+    });
+  }
+
+  function degisenler() {
+    return Object.keys(degerler).filter(function (k) { return degerler[k] !== kayitli[k]; });
+  }
+
+  function durumGuncelle(metin, sinif) {
+    var d = degisenler().length;
+    $("kaydet").disabled = d === 0;
+    var el = $("durum");
+    el.className = "durum " + (sinif || (d ? "degisti" : ""));
+    el.textContent = metin || (d ? d + " alanda kaydedilmemiş değişiklik var" : "Tüm değişiklikler kayıtlı");
+    var butonlar = $("gruplar").children;
+    sema.forEach(function (g, i) {
+      var n = g.alanlar.filter(function (a) { return degerler[a.k] !== kayitli[a.k]; }).length;
+      var rozet = butonlar[i] && butonlar[i].querySelector(".rozet");
+      if (rozet) { rozet.textContent = n; rozet.classList.toggle("gizli", n === 0); }
+    });
+  }
+
+  function gruplariCiz() {
+    var nav = $("gruplar");
+    nav.textContent = "";
+    sema.forEach(function (g, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = g.grup;
+      var r = document.createElement("span");
+      r.className = "rozet gizli";
+      b.appendChild(r);
+      b.setAttribute("aria-current", i === aktif ? "true" : "false");
+      b.addEventListener("click", function () { aktif = i; gruplariCiz(); grubuCiz(); durumGuncelle(); window.scrollTo(0, 0); });
+      nav.appendChild(b);
+    });
+  }
+
+  var IPUCU = {
+    gorsel: "JPG, PNG veya WEBP. Büyük fotoğraflar yüklenirken otomatik küçültülür.",
+    baglanti: "https:// ile başlayan tam adres.",
+    whatsapp: "Sadece rakam, başında 90 ile. Örnek: 905380136697",
+    mesaj: "Ziyaretçi butona tıklayınca WhatsApp'ta hazır yazılı gelen mesaj."
+  };
+
+  function grubuCiz() {
+    var g = sema[aktif], kart = $("kart");
+    kart.textContent = "";
+    var h = document.createElement("h2"); h.textContent = g.grup; kart.appendChild(h);
+    var p = document.createElement("p"); p.textContent = "Değişiklikler, üstteki “Değişiklikleri kaydet” butonuna bastığınızda sitede görünür."; kart.appendChild(p);
+    g.alanlar.forEach(function (a) { kart.appendChild(alanCiz(a)); });
+  }
+
+  function alanCiz(a) {
+    var kutu = document.createElement("div");
+    kutu.className = "alan";
+    var id = "a-" + a.k;
+    var lbl = document.createElement("label"); lbl.htmlFor = id; lbl.textContent = a.etiket; kutu.appendChild(lbl);
+
+    var guncelle = function () {
+      kutu.classList.toggle("duzenlendi", degerler[a.k] !== kayitli[a.k]);
+      sifirla.classList.toggle("gizli", degerler[a.k] === varsayilan[a.k]);
+      kutu.classList.toggle("hatali", !!hataliAlanlar[a.k]);
+      durumGuncelle();
+    };
+
+    var giris;
+    if (a.tur === "gorsel") {
+      var sarmal = document.createElement("div"); sarmal.className = "gorsel-alan";
+      var img = document.createElement("img"); img.alt = ""; img.src = degerler[a.k];
+      if (/logo/.test(a.k)) img.className = "logo-onizleme";
+      var dugmeler = document.createElement("div"); dugmeler.className = "gorsel-dugmeler";
+      giris = document.createElement("input"); giris.type = "file"; giris.accept = "image/jpeg,image/png,image/webp"; giris.id = id; giris.className = "gizli";
+      var sec = document.createElement("button"); sec.type = "button"; sec.className = "btn btn-ikincil"; sec.textContent = "Fotoğrafı değiştir";
+      var bilgi = document.createElement("span"); bilgi.className = "yukleniyor";
+      sec.addEventListener("click", function () { giris.click(); });
+      giris.addEventListener("change", function () {
+        var dosya = giris.files[0]; if (!dosya) return;
+        sec.disabled = true; bilgi.textContent = "Yükleniyor…";
+        kucult(dosya, /logo/.test(a.k)).then(function (blob) {
+          var fd = new FormData(); fd.append("dosya", blob, dosya.name);
+          return api("/api/gorsel", { method: "POST", body: fd });
+        }).then(function (s) {
+          if (s.durum === 401) return girisGoster(s.veri.hata);
+          if (s.durum !== 200) throw new Error(s.veri.hata || "Yükleme başarısız.");
+          degerler[a.k] = s.veri.url; img.src = s.veri.url; bilgi.textContent = "Yüklendi. Kaydetmeyi unutmayın.";
+          delete hataliAlanlar[a.k]; guncelle();
+        }).catch(function (e) { bilgi.textContent = e.message || "Yükleme başarısız."; })
+          .then(function () { sec.disabled = false; giris.value = ""; });
+      });
+      dugmeler.appendChild(sec); dugmeler.appendChild(bilgi); dugmeler.appendChild(giris);
+      sarmal.appendChild(img); sarmal.appendChild(dugmeler);
+      kutu.appendChild(sarmal);
+      kutu._onizleme = img;
+    } else {
+      giris = document.createElement(a.tur === "uzun" || a.tur === "mesaj" ? "textarea" : "input");
+      if (giris.tagName === "INPUT") giris.type = "text";
+      giris.id = id; giris.value = degerler[a.k];
+      giris.addEventListener("input", function () { degerler[a.k] = giris.value; delete hataliAlanlar[a.k]; guncelle(); });
+      kutu.appendChild(giris);
+    }
+
+    var alt = document.createElement("div"); alt.className = "alan-alt";
+    var ipucu = document.createElement("span"); ipucu.className = "ipucu"; ipucu.textContent = IPUCU[a.tur] || "";
+    var sifirla = document.createElement("button"); sifirla.type = "button"; sifirla.className = "btn-metin"; sifirla.textContent = "Varsayılana dön";
+    sifirla.addEventListener("click", function () {
+      degerler[a.k] = varsayilan[a.k];
+      if (a.tur === "gorsel") kutu._onizleme.src = varsayilan[a.k]; else giris.value = varsayilan[a.k];
+      guncelle();
+    });
+    alt.appendChild(ipucu); alt.appendChild(sifirla);
+    kutu.appendChild(alt);
+    guncelle();
+    return kutu;
+  }
+
+  // Fotoğrafı tarayıcıda küçült (en fazla 1800 px, logolar 900 px)
+  function kucult(dosya, logo) {
+    var enFazla = logo ? 900 : 1800;
+    return createImageBitmap(dosya).then(function (bmp) {
+      var oran = Math.min(1, enFazla / Math.max(bmp.width, bmp.height));
+      var c = document.createElement("canvas");
+      c.width = Math.round(bmp.width * oran); c.height = Math.round(bmp.height * oran);
+      c.getContext("2d").drawImage(bmp, 0, 0, c.width, c.height);
+      var tur = dosya.type === "image/png" ? "image/png" : "image/jpeg";
+      return new Promise(function (ok) { c.toBlob(ok, tur, 0.85); });
+    }).catch(function () { return dosya; });
+  }
+
+  $("giris-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    $("giris-btn").disabled = true;
+    $("giris-hata").classList.add("gizli");
+    api("/api/giris", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kullanici: $("kullanici").value, sifre: $("sifre").value }) })
+      .then(function (s) {
+        $("giris-btn").disabled = false;
+        if (s.durum !== 200) { $("giris-hata").textContent = s.veri.hata || "Giriş yapılamadı."; $("giris-hata").classList.remove("gizli"); return; }
+        $("sifre").value = "";
+        yukle();
+      });
+  });
+
+  $("kaydet").addEventListener("click", function () {
+    $("kaydet").disabled = true;
+    durumGuncelle("Kaydediliyor…", "durum");
+    api("/api/icerik", { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ degerler: degerler }) })
+      .then(function (s) {
+        if (s.durum === 401) { girisGoster(s.veri.hata); return; }
+        if (s.durum === 422) {
+          hataliAlanlar = {};
+          (s.veri.alanlar || []).forEach(function (k) { hataliAlanlar[k] = true; });
+          var ilk = sema.findIndex(function (g) { return g.alanlar.some(function (a) { return hataliAlanlar[a.k]; }); });
+          if (ilk >= 0) { aktif = ilk; gruplariCiz(); grubuCiz(); }
+          durumGuncelle("Kırmızı işaretli alanlar boş ya da geçersiz", "durum degisti");
+          return;
+        }
+        if (s.durum !== 200) { durumGuncelle(s.veri.hata || "Kaydedilemedi, tekrar deneyin.", "durum degisti"); return; }
+        kayitli = Object.assign({}, degerler);
+        hataliAlanlar = {};
+        grubuCiz();
+        durumGuncelle("Kaydedildi. Sitede en geç 1 dakika içinde görünür", "durum kaydedildi");
+      })
+      .catch(function () { durumGuncelle("Bağlantı hatası, tekrar deneyin.", "durum degisti"); });
+  });
+
+  $("cikis").addEventListener("click", function () {
+    if (degisenler().length && !confirm("Kaydedilmemiş değişiklikler var. Yine de çıkılsın mı?")) return;
+    api("/api/cikis", { method: "POST" }).then(function () { kayitli = Object.assign({}, degerler); girisGoster(); });
+  });
+
+  window.addEventListener("beforeunload", function (e) {
+    if (degisenler().length) { e.preventDefault(); e.returnValue = ""; }
+  });
+
+  yukle();
+})();
+</script>
+</body>
+</html>

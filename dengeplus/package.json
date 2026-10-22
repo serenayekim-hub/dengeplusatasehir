@@ -1,0 +1,11 @@
+{
+  "name": "dengeplus",
+  "private": true,
+  "scripts": {
+    "yerel": "wrangler pages dev",
+    "yayinla": "wrangler pages deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.40.0"
+  }
+}
